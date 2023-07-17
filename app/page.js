@@ -1,4 +1,5 @@
 import Image from "next/image";
+import EASAttest from "./components/EASAttest";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
         <Image src="/header.png" height={180} width={180} alt="header" />
         <span className="mt-2 font-bold">Completion Attestation</span>
       </h2>
+      <EASAttest />
       <Image
         className="absolute bottom-0"
         src="/zombie.png"
