@@ -1,34 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# eas_walkthrough
+
+A user interface for creating attestations for completing the Crypto Zombies course using Ethereum Attestation Service (EAS).
 
 ## Getting Started
 
-First, run the development server:
+### Starting Point
 
-```bash
+You can start at the commit `01_BOILER_PLATE` to understand the initial boilerplate setup.
+
+### Components
+
+1. **Main Component**: Sets up the structure and styles for the UI, displaying a header, attestation form, and a zombie image at the bottom.
+2. **EASAttest Component**: The core of the UI where users can input their name, address, and message to submit their completion attestation for the Crypto Zombies course.
+
+### Functionality
+
+The EASAttest component leverages the Ethereum Attestation Service (EAS) SDK to create attestations on the Ethereum blockchain. The attestations are generated based on user inputs and stored with a unique identifier (UID) for reference.
+
+## Installation
+
+Ensure you have `next`, `@ethereum-attestation-service/eas-sdk`, `ethers`, and `react` installed.
+
+1. Clone this repository:
+
+git clone https://github.com/ChaskinOnChain/eas_walkthrough.git
+
+2. Install the dependencies:
+
+npm install
+
+3. Run the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Visit `http://localhost:3000` to view the application.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Usage
 
-## Learn More
+1. Input your `Name`, `Address`, and a `Message` indicating completion.
+2. Click on `Submit Attestation`.
+3. Wait for the attestation to be processed.
+4. Once done, you will receive a confirmation message displaying the unique identifier (UID) of the submitted attestation.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+This project is licensed under the MIT License.
